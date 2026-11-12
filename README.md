@@ -2,14 +2,14 @@
 
 [![Profile](https://img.shields.io/badge/Live%20Profile-fakhri--rizal.vercel.app-0284c7?style=for-the-badge)](https://fakhri-rizal.vercel.app/)
 [![Institution](https://img.shields.io/badge/Institution-Politeknik%20Negeri%20Batam-059669?style=for-the-badge)](https://www.polibatam.ac.id/)
-[![Achievement](https://img.shields.io/badge/Achievement-1st%20Place%20PBL%20EXPO%202026-d97706?style=for-the-badge)](#-prestasi-utama--proyek-sawit)
-[![Architecture](https://img.shields.io/badge/Architecture-Pure%20Static%20%7C%20Zero%20Vulnerability-38bdf8?style=for-the-badge)](#-arsitektur-dan-keamanan-web)
+[![Achievement](https://img.shields.io/badge/Achievement-1st%20Place%20PBL%20EXPO%202026-d97706?style=for-the-badge)](#prestasi-utama--proyek-sawit)
+[![Architecture](https://img.shields.io/badge/Architecture-Pure%20Static%20%7C%20Zero%20Vulnerability-38bdf8?style=for-the-badge)](#arsitektur-dan-keamanan-web)
 
 Selamat datang di repositori web profil profesional **Fakhri Rizal**. Web ini dirancang dengan pendekatan modern, performa tinggi, dan arsitektur statis yang berfokus pada pertahanan keamanan siber (*Zero Attack Surface*). Dilengkapi dengan antarmuka dwibahasa (**Bahasa Indonesia & English**), integrasi formulir kontak multi-kanal langsung ke WhatsApp dan Email pribadi, serta dokumentasi rekayasa sistem keamanan.
 
 ---
 
-## 👨‍💻 Profil Singkat (Executive Summary)
+## Profil Singkat (Executive Summary)
 
 **Fakhri Rizal** adalah mahasiswa Rekayasa Keamanan Siber (*Cybersecurity Engineering*) di **Politeknik Negeri Batam** (2024–2028). Berpengalaman praktis dalam rekayasa *Intrusion Detection & Prevention System* (IDS/IPS), pemantauan telemetri keamanan terpusat (*SIEM*), pemanfaatan *Machine Learning* untuk deteksi anomali ancaman, serta pengembangan arsitektur backend berprinsip *Zero Trust*.
 
@@ -22,7 +22,7 @@ Selamat datang di repositori web profil profesional **Fakhri Rizal**. Web ini di
 
 ---
 
-## 🏆 Prestasi Utama & Proyek SAWIT
+## Prestasi Utama & Proyek SAWIT
 
 ### **SAWIT (Security Analysis Watch Intelligence Threat)**
 *Zero Trust Cybersecurity Platform with Multi-Model Machine Learning Anomaly Detection*
@@ -37,7 +37,7 @@ Selamat datang di repositori web profil profesional **Fakhri Rizal**. Web ini di
 
 ---
 
-## 🎓 Pendidikan & Sertifikasi
+## Pendidikan & Sertifikasi
 
 ### Pendidikan Formal
 - **Politeknik Negeri Batam** (2024 – 2028)  
@@ -55,7 +55,7 @@ Selamat datang di repositori web profil profesional **Fakhri Rizal**. Web ini di
 
 ---
 
-## 🌐 Fitur Unggulan Web Profile
+## Fitur Unggulan Web Profile
 
 1. **Bilingual Switcher (ID & EN)**:
    - Beralih bahasa secara instan tanpa memuat ulang (*reload*) halaman. Pilihan bahasa tersimpan otomatis di `localStorage`.
@@ -66,17 +66,15 @@ Selamat datang di repositori web profil profesional **Fakhri Rizal**. Web ini di
    - Widget obrolan mengapung di pojok kanan bawah layar untuk interaksi cepat dan profesional dengan pengunjung/klien.
 4. **Dark / Light Mode**:
    - Pengunjung dapat memilih tampilan *Cyber Obsidian Dark* atau *Executive Clean Light*.
-5. **Slot Portofolio Siap Pakai**:
-   - Sudah disiapkan struktur kartu untuk proyek tambahan yang dapat Anda duplikasi kapan saja.
 
 ---
 
-## 📁 Struktur Berkas
+## Struktur Berkas
 
 ```text
 profile/
 ├── index.html         # Struktur semantik HTML5, meta tag SEO/OpenGraph, & konten dwibahasa
-├── vercel.json        # Enterprise HTTP Security Headers (HSTS, CSP/Permissions, nosniff, DENY)
+├── vercel.json        # HTTP Security Headers (HSTS, CSP/Permissions, nosniff, DENY)
 ├── robots.txt         # Konfigurasi crawler & sitemap index
 ├── sitemap.xml        # Sitemap XML terstruktur
 ├── og-image.png       # OpenGraph Banner (1200x630) untuk media sosial / link preview
@@ -87,7 +85,7 @@ profile/
 │   ├── CV-Fakhri-Rizal-EN.pdf  # Curriculum Vitae versi English
 │   └── CV-Fakhri-Rizal.pdf     # Fallback default CV
 ├── css/
-│   └── style.css      # Desain bertema Cyber SecOps, responsive mobile/tablet/desktop, glassmorphism
+│   └── style.css      # Desain bertema Cyber SecOps, responsive mobile/tablet/desktop, solid color themes
 ├── js/
 │   └── main.js        # Logika dwibahasa, integrasi WhatsApp & form email, widget chat, animasi canvas
 └── README.md          # Dokumentasi teknis & panduan deployment
@@ -95,7 +93,7 @@ profile/
 
 ---
 
-## ⚙️ Panduan Konfigurasi (Sebelum Deploy)
+## Panduan Konfigurasi (Sebelum Deploy)
 
 Buka berkas [`js/main.js`](js/main.js), lalu sesuaikan konfigurasi pada baris teratas:
 
@@ -116,7 +114,7 @@ const CONFIG = {
 
 ---
 
-## 🚀 Panduan Step-by-Step Deploy ke Vercel
+## Panduan Step-by-Step Deploy ke Vercel
 
 Vercel adalah platform hosting cloud modern yang cepat, andal, gratis selamanya untuk proyek personal, dan otomatis dilengkapi enkripsi **SSL/HTTPS**.
 
@@ -142,7 +140,7 @@ git push -u origin main
 ```
 > *(Pastikan mengganti `USERNAME-ANDA` dan `NAMA-REPO-ANDA` sesuai dengan URL repository yang baru Anda buat di GitHub).*
 
-#### 💡 Alternatif Tanpa Perintah Terminal:
+#### Alternatif Tanpa Perintah Terminal:
 Jika Anda tidak ingin menggunakan terminal Git:
 1. Pada halaman repository baru di GitHub, klik tautan **"uploading an existing file"**.
 2. *Drag & drop* seluruh file `index.html`, folder `css`, folder `js`, dan `README.md` ke browser.
@@ -169,7 +167,7 @@ Jika Anda tidak ingin menggunakan terminal Git:
 
 ---
 
-### 🔄 Pembaruan Otomatis (Auto CI/CD)
+### Pembaruan Otomatis (Auto CI/CD)
 Kapan pun Anda mengedit atau menambahkan proyek baru di komputer, cukup jalankan:
 ```bash
 git add .
@@ -180,11 +178,11 @@ Vercel akan mendeteksi perubahan tersebut dan secara otomatis me-redeploy web An
 
 ---
 
-## 🔒 Arsitektur dan Keamanan Web
+## Arsitektur dan Keamanan Web
 
 Sebagai portofolio praktisi keamanan siber, web ini dirancang dengan standar keamanan dan *Zero Attack Surface*:
 - **Zero Attack Surface**: Tidak menggunakan basis data SQL, interpreter PHP, atau runtime dinamis backend yang rentan terhadap SQLi, LFI, SSRF, maupun RCE.
-- **Enterprise Security Headers (dikonfigurasi via `vercel.json`)**:
+- **HTTP Security Headers (dikonfigurasi via `vercel.json`)**:
   - `Strict-Transport-Security`: `max-age=63072000; includeSubDomains; preload` (Enforce HSTS 2 tahun)
   - `X-Content-Type-Options`: `nosniff` (Mencegah MIME type sniffing)
   - `X-Frame-Options`: `DENY` (Proteksi total dari Clickjacking)
@@ -195,7 +193,7 @@ Sebagai portofolio praktisi keamanan siber, web ini dirancang dengan standar kea
 
 ---
 
-## 📬 Kontak & Tautan Profesional
+## Kontak & Tautan Profesional
 
 - **Email**: [fakhririzal710@gmail.com](mailto:fakhririzal710@gmail.com)
 - **LinkedIn**: [linkedin.com/in/fakhri-rizal-96195a341](https://www.linkedin.com/in/fakhri-rizal-96195a341)

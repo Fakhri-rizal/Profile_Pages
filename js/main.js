@@ -69,14 +69,12 @@ const translations = {
     stat_gpa_desc: "Politeknik Negeri Batam",
 
     // About
-    about_eyebrow: "01. PROFIL PRIBADI",
     about_title: "Membangun Pertahanan Siber yang Presisi & Adaptif",
     about_p1: "Saya adalah mahasiswa Rekayasa Keamanan Siber di Politeknik Negeri Batam dengan fokus mendalam pada Intrusion Detection & Prevention System (IDS/IPS), Security Information and Event Management (SIEM), serta Machine Learning untuk keamanan siber.",
     about_p2: "Filosofi saya adalah keamanan tidak boleh menjadi pemikiran belakangan, melainkan harus tertanam di setiap lapisan arsitektur: dari transmisi paket jaringan hingga logika kode backend. Melalui platform SAWIT (Security Analysis Watch Intelligence Threat), saya memimpin integrasi deteksi anomali berbasis kecerdasan buatan dengan alat monitoring industri seperti Wazuh, Suricata, dan Keycloak.",
-    about_p3: "Saya siap berkontribusi pada proyek keamanan siber dunia nyata, penelitian pertahanan digital, maupun rekayasa backend berstandar enterprise.",
+    about_p3: "Saya siap berkontribusi pada proyek keamanan siber, penelitian pertahanan sistem, dan rekayasa backend produksi.",
 
     // Projects
-    projects_eyebrow: "02. REKAYASA & PROYEK",
     projects_title: "Proyek Unggulan & Portofolio",
     projects_desc: "Kompilasi proyek sistem keamanan, integrasi SIEM, deteksi anomali machine learning, dan arsitektur backend.",
     
@@ -84,14 +82,14 @@ const translations = {
     sawit_badge: "PROYEK UTAMA • JUARA 1 PBL EXPO 2026",
     sawit_title: "SAWIT — Security Analysis Watch Intelligence Threat",
     sawit_subtitle: "Zero Trust Cybersecurity Platform with Multi-Model Machine Learning Anomaly Detection",
-    sawit_desc: "Platform keamanan siber berarsitektur Zero Trust yang dirancang untuk memproteksi aplikasi web akademik aktif dari berbagai serangan siber modern secara real-time.",
+    sawit_desc: "Platform keamanan siber berarsitektur Zero Trust yang dirancang untuk memproteksi aplikasi web akademik aktif dari serangan siber secara real-time.",
     sawit_lead: "Peran: Team Lead & Security Architect",
     sawit_f1: "Engine deteksi anomali multi-model ML: Isolation Forest, One-Class SVM, Autoencoder, dan LSTM/GRU untuk menganalisis payload dan anomali perilaku trafik.",
     sawit_f2: "User & Entity Behavior Analytics (UEBA) untuk mendeteksi deviasi pola akses pengguna dan potensi pengambilalihan akun (account takeover).",
-    sawit_f3: "Integrasi terpadu ekosistem SOC: Wazuh SIEM, Suricata IDS/IPS, Keycloak IAM, TheHive untuk case management, dan MISP untuk threat intelligence sharing.",
+    sawit_f3: "Integrasi Wazuh (SIEM), Suricata (IDS/IPS), Keycloak (IAM), TheHive (case management), dan MISP (threat intelligence).",
     sawit_result: "Pencapaian: 1st Place Winner - Networking & Cybersecurity Category, 6th International PBL EXPO 2026.",
     sawit_cs_problem_label: "Masalah:",
-    sawit_cs_problem_desc: "Aplikasi web akademik aktif rentan terhadap eksploitasi serangan modern (SQLi, XSS, brute force, privilege escalation) dengan keterbatasan visibilitas telemetri waktu nyata.",
+    sawit_cs_problem_desc: "Aplikasi web akademik aktif rentan terhadap serangan (SQLi, XSS, brute force, privilege escalation) dengan visibilitas telemetri waktu nyata yang terbatas.",
     sawit_cs_approach_label: "Pendekatan:",
     sawit_cs_approach_desc: "Mengimplementasikan arsitektur Zero Trust dengan pertahanan berlapis: deployment sensor Suricata IDS/IPS inline, custom rules, agregasi log Wazuh SIEM, API telemetri Flask, multi-model ensemble ML (Isolation Forest, One-Class SVM, Autoencoder) & UEBA, serta otomatisasi isolasi firewall MikroTik.",
     sawit_cs_role_label: "Peranku (Team Lead):",
@@ -110,13 +108,12 @@ const translations = {
     proj3_desc: "Arsitektur otentikasi terpusat berbasis OAuth2/OIDC menggunakan Keycloak dan backend Python Flask, di-containerize dengan Podman untuk isolasi layanan tanpa daemon root.",
 
     proj4_title: "UEBA & Anomaly Detection Service",
-    proj4_desc: "Layanan microservice cerdas berbasis Python & Scikit-Learn/TensorFlow untuk memprediksi anomali aktivitas request HTTP dengan memetakan deviasi skor risiko per sesi pengguna.",
+    proj4_desc: "Layanan microservice berbasis Python & Scikit-Learn/TensorFlow untuk mendeteksi anomali request HTTP dan menghitung skor risiko per sesi pengguna.",
 
     proj_placeholder_title: "Slot Proyek Tambahan",
     proj_placeholder_desc: "Ruang ini disiapkan untuk proyek baru berikutnya. Anda dapat menambahkan tautan repositori GitHub, demo live, atau dokumentasi teknis dengan mudah.",
 
     // Experience & Education
-    exp_eyebrow: "03. RIWAYAT & JEJAK",
     exp_title: "Pengalaman & Pendidikan",
     exp_work_title: "Pengalaman Kerja & Proyek",
     exp_edu_title: "Pendidikan Formal",
@@ -146,9 +143,8 @@ const translations = {
     edu2_desc: "Mempelajari fundamental jaringan komputer (routing, switching, subnetting, TCP/IP), administrasi server Linux, konfigurasi mikrotik, dan dasar-dasar keamanan sistem.",
 
     // Skills
-    skills_eyebrow: "04. KUALIFIKASI TEKNIS",
     skills_title: "Keahlian & Kompetensi Utama",
-    skills_desc: "Penguasaan teknologi dalam spektrum pertahanan siber, kecerdasan buatan, dan pengembangan perangkat lunak.",
+    skills_desc: "Penguasaan teknologi di bidang pertahanan siber, machine learning, dan rekayasa perangkat lunak.",
     
     skill_cat_sec: "Keamanan Siber & Jaringan",
     skill_cat_ml: "Machine Learning untuk Sekuritas",
@@ -156,7 +152,6 @@ const translations = {
     skill_cat_tools: "Alat & Ekosistem SOC",
 
     // Certifications
-    certs_eyebrow: "05. PENGAKUAN & LISENSI",
     certs_title: "Sertifikasi & Penghargaan",
     certs_desc: "Validasi kompetensi profesional dan pencapaian kompetisi tingkat nasional & internasional.",
 
@@ -168,7 +163,7 @@ const translations = {
     cert_rh_duration_val: "24 jam",
     cert_label_type: "Tipe:",
     cert_rh_type_val: "Certificate of Attendance",
-    cert_verify_link: "Verifikasi Kredensial ↗",
+    cert_verify_link: "Verifikasi Kredensial",
 
     // Cert 1: CCEP
     cert_ccep_title: "Certified Cybersecurity Educator Professional (CCEP)",
@@ -211,7 +206,6 @@ const translations = {
     cert5_issuer: "Red Hat",
 
     // Contact
-    contact_eyebrow: "06. HUBUNGI SAYA",
     contact_title: "Mari Terhubung & Berdiskusi",
     contact_desc: "Apakah Anda memiliki peluang proyek, tawaran magang/kerja, atau ingin berdiskusi seputar keamanan siber? Hubungi saya melalui formulir di bawah ini — pesan Anda akan langsung diteruskan ke WhatsApp atau Email pribadi saya.",
     
@@ -298,14 +292,12 @@ const translations = {
     stat_gpa_desc: "Politeknik Negeri Batam",
 
     // About
-    about_eyebrow: "01. PERSONAL PROFILE",
     about_title: "Engineering Resilient, Proactive Cyber Defenses",
     about_p1: "I am a Cybersecurity Engineering student at Politeknik Negeri Batam with a strong focus on Intrusion Detection & Prevention Systems (IDS/IPS), Security Information and Event Management (SIEM), and Machine Learning for cyber defense.",
-    about_p2: "My core philosophy is that security cannot be an afterthought; it must be built into every layer of a system—from raw packet telemetry at the network layer to the business logic of backend applications. As Team Lead on the SAWIT platform (Security Analysis Watch Intelligence Threat), I spearheaded the integration of AI-driven anomaly detection with enterprise security tools like Wazuh, Suricata, and Keycloak.",
-    about_p3: "I am actively looking for opportunities to contribute to real-world cybersecurity engineering, threat research, and robust backend architectures.",
+    about_p2: "My core philosophy is that security cannot be an afterthought; it must be built into every layer of a system—from raw packet telemetry at the network layer to the business logic of backend applications. As Team Lead on the SAWIT platform (Security Analysis Watch Intelligence Threat), I led the integration of machine learning anomaly detection with security tools like Wazuh, Suricata, and Keycloak.",
+    about_p3: "I am actively looking for opportunities to contribute to cybersecurity engineering, threat research, and backend system architectures.",
 
     // Projects
-    projects_eyebrow: "02. ENGINEERING & PROJECTS",
     projects_title: "Featured Works & Showcases",
     projects_desc: "A curated selection of security architectures, SIEM telemetry pipelines, ML anomaly detection engines, and backend integrations.",
     
@@ -313,14 +305,14 @@ const translations = {
     sawit_badge: "FLAGSHIP PROJECT • 1ST PLACE PBL EXPO 2026",
     sawit_title: "SAWIT — Security Analysis Watch Intelligence Threat",
     sawit_subtitle: "Zero Trust Cybersecurity Platform with Multi-Model Machine Learning Anomaly Detection",
-    sawit_desc: "A Zero Trust cybersecurity platform engineered to protect an active, live academic web application from modern cyber threats in real time.",
+    sawit_desc: "A Zero Trust cybersecurity platform engineered to protect an active academic web application from cyber threats in real time.",
     sawit_lead: "Role: Team Lead & Security Architect",
     sawit_f1: "Multi-model ML detection engine: Isolation Forest, One-Class SVM, Autoencoder, and LSTM/GRU for deep traffic payload and behavioral anomaly detection.",
     sawit_f2: "User & Entity Behavior Analytics (UEBA) to identify anomalous user patterns and mitigate account takeover threats.",
-    sawit_f3: "Seamless SOC ecosystem integration: Wazuh SIEM, Suricata IDS/IPS, Keycloak IAM, TheHive for incident response, and MISP for threat intelligence sharing.",
+    sawit_f3: "Integrates Wazuh (SIEM), Suricata (IDS/IPS), Keycloak (IAM), TheHive (case management), and MISP (threat intelligence).",
     sawit_result: "Achievement: 1st Place Winner - Networking & Cybersecurity Category, 6th International PBL EXPO 2026.",
     sawit_cs_problem_label: "Problem:",
-    sawit_cs_problem_desc: "Active academic web applications are vulnerable to modern exploit vectors (SQLi, XSS, brute force, privilege escalation) with limited real-time telemetry visibility.",
+    sawit_cs_problem_desc: "Active academic web applications are vulnerable to common exploits (SQLi, XSS, brute force, privilege escalation) with limited real-time telemetry visibility.",
     sawit_cs_approach_label: "Approach:",
     sawit_cs_approach_desc: "Implemented a multi-layered Zero Trust defense architecture: inline Suricata IDS/IPS sensor deployment, custom rules, Wazuh SIEM log aggregation, Flask telemetry API, multi-model ensemble ML (Isolation Forest, One-Class SVM, Autoencoder) & UEBA, and automated MikroTik firewall isolation.",
     sawit_cs_role_label: "My Role (Team Lead):",
@@ -339,13 +331,12 @@ const translations = {
     proj3_desc: "Centralized authentication architecture utilizing OAuth2/OIDC with Keycloak and a Python Flask backend, containerized via Podman for rootless service isolation.",
 
     proj4_title: "UEBA & Anomaly Detection Service",
-    proj4_desc: "Microservice powered by Python & Scikit-Learn/TensorFlow to evaluate incoming HTTP request anomalies and assign dynamic session-level risk scores.",
+    proj4_desc: "Microservice built with Python and Scikit-Learn/TensorFlow to evaluate HTTP request anomalies and assign session-level risk scores.",
 
     proj_placeholder_title: "Upcoming Project Slot",
     proj_placeholder_desc: "Reserved space for your next project release. You can quickly plug in GitHub repository links, live demos, or architecture diagrams here.",
 
     // Experience & Education
-    exp_eyebrow: "03. TRACK RECORD",
     exp_title: "Experience & Education",
     exp_work_title: "Work Experience & Roles",
     exp_edu_title: "Academic Background",
@@ -375,9 +366,8 @@ const translations = {
     edu2_desc: "Studied networking fundamentals (routing, switching, subnetting, TCP/IP), Linux server administration, network device configuration, and foundational system security.",
 
     // Skills
-    skills_eyebrow: "04. TECHNICAL COMPETENCIES",
     skills_title: "Skills & Core Capabilities",
-    skills_desc: "Hands-on technical stack spanning cyber defense, artificial intelligence, and robust software engineering.",
+    skills_desc: "Technical stack spanning cyber defense, machine learning, and backend software engineering.",
     
     skill_cat_sec: "Cybersecurity & Network Defense",
     skill_cat_ml: "Machine Learning for Security",
@@ -385,7 +375,6 @@ const translations = {
     skill_cat_tools: "SOC Tools & Ecosystem",
 
     // Certifications
-    certs_eyebrow: "05. CREDENTIALS & AWARDS",
     certs_title: "Certifications & Honors",
     certs_desc: "Professional competency certifications and national/international competition honors.",
 
@@ -397,7 +386,7 @@ const translations = {
     cert_rh_duration_val: "24 hours",
     cert_label_type: "Type:",
     cert_rh_type_val: "Certificate of Attendance",
-    cert_verify_link: "Verify Credential ↗",
+    cert_verify_link: "Verify Credential",
 
     // Cert 1: CCEP
     cert_ccep_title: "Certified Cybersecurity Educator Professional (CCEP)",
@@ -440,7 +429,6 @@ const translations = {
     cert5_issuer: "Red Hat",
 
     // Contact
-    contact_eyebrow: "06. GET IN TOUCH",
     contact_title: "Let's Connect & Collaborate",
     contact_desc: "Have an interesting cybersecurity project, internship opportunity, or technical inquiry? Reach out via the form below — your message will be dispatched directly to my WhatsApp or personal Email.",
     
@@ -603,12 +591,12 @@ function initContactForm() {
 
       // Format WhatsApp Markdown message
       let waText = `*Pesan Baru dari Web Portfolio Fakhri Rizal*\n\n`;
-      waText += `👤 *Nama:* ${name}\n`;
+      waText += `*Nama:* ${name}\n`;
       if (contact) {
-        waText += `📞 *Kontak:* ${contact}\n`;
+        waText += `*Kontak:* ${contact}\n`;
       }
-      waText += `📌 *Topik:* ${subject}\n\n`;
-      waText += `💬 *Pesan:*\n${message}\n\n`;
+      waText += `*Topik:* ${subject}\n\n`;
+      waText += `*Pesan:*\n${message}\n\n`;
       waText += `_Dikirim melalui Web Profile Fakhri Rizal_`;
 
       const encodedText = encodeURIComponent(waText);
@@ -670,7 +658,7 @@ function initContactForm() {
 
         const result = await response.json();
         if (response.status === 200) {
-          showAlert(alertBox, currentLang === 'id' ? '✅ Pesan berhasil terkirim ke email Fakhri!' : '✅ Message successfully sent to Fakhri\'s email!', 'success');
+          showAlert(alertBox, currentLang === 'id' ? 'Pesan berhasil terkirim ke email Fakhri!' : 'Message successfully sent to Fakhri\'s email!', 'success');
           form.reset();
         } else {
           throw new Error(result.message || 'Error occurred');
@@ -856,6 +844,9 @@ function initActiveNavHighlight() {
 // Bola-bola kecil berputar mengitari background & mengikuti pergerakan mouse/touchpad
 // ==========================================
 function initCyberCanvasAnimation() {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
   const canvas = document.getElementById('cyberCanvas');
   if (!canvas) return;
 
