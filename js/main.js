@@ -23,7 +23,7 @@ const CONFIG = {
   // Web3Forms Public Access Key (Free instant email service for static sites)
   // Cara dapatkan access key gratis (1 menit): Buka https://web3forms.com lalu masukkan email fakhririzal710@gmail.com
   // Setelah dapat, masukkan key di bawah ini:
-  WEB3FORMS_ACCESS_KEY: 'YOUR_ACCESS_KEY_HERE' 
+  WEB3FORMS_ACCESS_KEY: '4f59d234-ad6a-4798-a213-dc4373cc4b4e' 
 };
 
 // ==========================================
@@ -404,6 +404,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initClipboardButtons();
   initActiveNavHighlight();
+  initCyberCanvasAnimation();
 });
 
 // ==========================================
@@ -620,7 +621,7 @@ function initFloatingWhatsApp() {
 }
 
 // ==========================================
-// MOBILE MENU TOGGLE
+// MOBILE MENU TOGGLE (Optimized for iPhone, Android & Tablets)
 // ==========================================
 function initMobileNav() {
   const hamburger = document.getElementById('hamburgerBtn');
@@ -628,15 +629,42 @@ function initMobileNav() {
 
   if (!hamburger || !navMenu) return;
 
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
+  function closeMenu() {
+    navMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+
+  function toggleMenu() {
+    const isOpen = navMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
   });
 
-  // Close menu when clicking on nav link
+  // Close menu when clicking on any nav link
   document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
+      closeMenu();
     });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !hamburger.contains(e.target) && navMenu.classList.contains('open')) {
+      closeMenu();
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+      closeMenu();
+    }
   });
 }
 
@@ -709,4 +737,271 @@ function initActiveNavHighlight() {
       }
     });
   });
+}
+
+// ==========================================
+// INTERACTIVE CYBER BACKGROUND PARTICLES ANIMATION
+// Bola-bola kecil berputar mengitari background & mengikuti pergerakan mouse/touchpad
+// ==========================================
+function initCyberCanvasAnimation() {
+  const canvas = document.getElementById('cyberCanvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let animationFrameId;
+  let width = 0;
+  let height = 0;
+  let dpr = 1;
+
+  // Mouse & Touch Interaction State
+  const mouse = {
+    x: -9999,
+    y: -9999,
+    targetX: -9999,
+    targetY: -9999,
+    radius: 180,
+    active: false,
+    timer: null
+  };
+
+  // Particles Array
+  let particles = [];
+
+  function getParticleCount() {
+    if (window.innerWidth <= 480) return 24;  // iPhone / Compact Phones (Ringan & Hemat Baterai)
+    if (window.innerWidth <= 1024) return 40; // iPad / Tablets
+    return 65;                                // Desktop / Laptop
+  }
+
+  // Particle Class with Harmonic Orbit & Mouse Follower
+  class CyberParticle {
+    constructor() {
+      this.reset(true);
+    }
+
+    reset(initial = false) {
+      this.x = initial ? Math.random() * width : Math.random() * width;
+      this.y = initial ? Math.random() * height : Math.random() * height;
+      
+      // Floating orbit anchor
+      this.anchorX = this.x;
+      this.anchorY = this.y;
+      
+      // Orbiting motion parameters
+      this.orbitRadius = 25 + Math.random() * 55;
+      this.orbitAngle = Math.random() * Math.PI * 2;
+      this.orbitSpeed = (0.008 + Math.random() * 0.015) * (Math.random() > 0.5 ? 1 : -1);
+      
+      // Drift velocity of the anchor
+      this.vx = (Math.random() - 0.5) * 0.45;
+      this.vy = (Math.random() - 0.5) * 0.45;
+      
+      // Size & Appearance ("bola-bola kecil")
+      this.baseRadius = 1.6 + Math.random() * 2.2;
+      this.radius = this.baseRadius;
+      this.pulseAngle = Math.random() * Math.PI * 2;
+      this.pulseSpeed = 0.02 + Math.random() * 0.02;
+      
+      // Colors: Cyan (70%) or Emerald (30%)
+      const isEmerald = Math.random() > 0.7;
+      this.baseColor = isEmerald ? '16, 185, 129' : '56, 189, 248';
+      this.alpha = 0.35 + Math.random() * 0.45;
+    }
+
+    update() {
+      // 1. Natural Orbital Spin (Bola-bola berputar sekeliling anchor)
+      this.orbitAngle += this.orbitSpeed;
+      this.pulseAngle += this.pulseSpeed;
+      this.radius = this.baseRadius + Math.sin(this.pulseAngle) * 0.5;
+
+      // Anchor drifts across the screen
+      this.anchorX += this.vx;
+      this.anchorY += this.vy;
+
+      // Screen boundary wrap for the anchor
+      if (this.anchorX < -50) this.anchorX = width + 50;
+      if (this.anchorX > width + 50) this.anchorX = -50;
+      if (this.anchorY < -50) this.anchorY = height + 50;
+      if (this.anchorY > height + 50) this.anchorY = -50;
+
+      // Calculated ideal orbital position
+      let targetX = this.anchorX + Math.cos(this.orbitAngle) * this.orbitRadius;
+      let targetY = this.anchorY + Math.sin(this.orbitAngle) * this.orbitRadius;
+
+      // 2. Mouse / Touchpad Interaction: Follow & Swarm Effect
+      if (mouse.active) {
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < mouse.radius && dist > 0) {
+          // Force is stronger closer to cursor
+          const force = (mouse.radius - dist) / mouse.radius;
+          
+          // Tangential swirl (mengitari kursor mouse) + gravitational attraction (mendekat)
+          const angleToMouse = Math.atan2(dy, dx);
+          const swirlAngle = angleToMouse + Math.PI / 2 * (this.orbitSpeed > 0 ? 1 : -1);
+          
+          const attractStrength = force * 2.2;
+          const swirlStrength = force * 1.8;
+
+          targetX = this.x + Math.cos(angleToMouse) * attractStrength * 20 + Math.cos(swirlAngle) * swirlStrength * 15;
+          targetY = this.y + Math.sin(angleToMouse) * attractStrength * 20 + Math.sin(swirlAngle) * swirlStrength * 15;
+          
+          // Push away slightly if too close to avoid clump
+          if (dist < 35) {
+            targetX = this.x - Math.cos(angleToMouse) * 12;
+            targetY = this.y - Math.sin(angleToMouse) * 12;
+          }
+        }
+      }
+
+      // Smooth interpolation towards target position (fluid damping)
+      this.x += (targetX - this.x) * 0.08;
+      this.y += (targetY - this.y) * 0.08;
+    }
+
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, Math.max(0.8, this.radius), 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${this.baseColor}, ${this.alpha})`;
+      ctx.shadowColor = `rgba(${this.baseColor}, 0.5)`;
+      ctx.shadowBlur = 6;
+      ctx.fill();
+      ctx.shadowBlur = 0; // Reset shadow for performance
+    }
+  }
+
+  function resize() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    width = window.innerWidth;
+    height = window.innerHeight;
+
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+
+    ctx.scale(dpr, dpr);
+
+    // Recreate particles to match screen size
+    const count = getParticleCount();
+    particles = [];
+    for (let i = 0; i < count; i++) {
+      particles.push(new CyberParticle());
+    }
+  }
+
+  // Draw subtle connecting constellation lines between nearby particles
+  function drawConnections() {
+    const maxDist = window.innerWidth <= 768 ? 75 : 95;
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < maxDist) {
+          const lineAlpha = (1 - dist / maxDist) * 0.18;
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = `rgba(56, 189, 248, ${lineAlpha})`;
+          ctx.lineWidth = 0.8;
+          ctx.stroke();
+        }
+      }
+
+      // Also connect to mouse/touch if active and close
+      if (mouse.active) {
+        const mdx = particles[i].x - mouse.x;
+        const mdy = particles[i].y - mouse.y;
+        const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+
+        if (mdist < 140) {
+          const mAlpha = (1 - mdist / 140) * 0.35;
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(mouse.x, mouse.y);
+          ctx.strokeStyle = `rgba(16, 185, 129, ${mAlpha})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+    }
+  }
+
+  // Animation Loop
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Smooth mouse position tracking
+    mouse.x += (mouse.targetX - mouse.x) * 0.2;
+    mouse.y += (mouse.targetY - mouse.y) * 0.2;
+
+    // Draw connection lines first (behind particles)
+    drawConnections();
+
+    // Update & draw particles
+    for (let i = 0; i < particles.length; i++) {
+      particles[i].update();
+      particles[i].draw();
+    }
+
+    animationFrameId = requestAnimationFrame(animate);
+  }
+
+  // Input Listeners: Mousepad / Mouse & Touch
+  function triggerActiveMouse(clientX, clientY) {
+    mouse.targetX = clientX;
+    mouse.targetY = clientY;
+    if (!mouse.active) {
+      mouse.x = clientX;
+      mouse.y = clientY;
+    }
+    mouse.active = true;
+
+    clearTimeout(mouse.timer);
+    // Return gently to autonomous orbit after 3 seconds of idle
+    mouse.timer = setTimeout(() => {
+      mouse.active = false;
+    }, 3000);
+  }
+
+  window.addEventListener('mousemove', (e) => {
+    triggerActiveMouse(e.clientX, e.clientY);
+  }, { passive: true });
+
+  window.addEventListener('touchmove', (e) => {
+    if (e.touches.length > 0) {
+      triggerActiveMouse(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  }, { passive: true });
+
+  window.addEventListener('touchstart', (e) => {
+    if (e.touches.length > 0) {
+      triggerActiveMouse(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  }, { passive: true });
+
+  window.addEventListener('mouseleave', () => {
+    mouse.active = false;
+  });
+
+  window.addEventListener('resize', () => {
+    resize();
+  });
+
+  // Battery saving: Pause animation when tab is inactive / minimized
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      cancelAnimationFrame(animationFrameId);
+    } else {
+      animationFrameId = requestAnimationFrame(animate);
+    }
+  });
+
+  // Initialize
+  resize();
+  animate();
 }

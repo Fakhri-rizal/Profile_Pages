@@ -82,6 +82,22 @@ body {
   min-height: 100vh;
 }
 
+/* Interactive Cyber Canvas Background */
+.cyber-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+main, section, .site-footer {
+  position: relative;
+  z-index: 1;
+}
+
 /* Cyber Matrix Background Grid */
 body::before {
   content: '';
@@ -297,8 +313,45 @@ button, input, textarea, select {
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.4rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: var(--radius-sm);
   color: var(--text-main);
+  transition: all var(--transition-fast);
+}
+
+.hamburger:hover {
+  background: var(--bg-tertiary);
+}
+
+.hamburger-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--text-main);
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center;
+}
+
+.hamburger.open .hamburger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background-color: var(--accent-cyan);
+}
+
+.hamburger.open .hamburger-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.open .hamburger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background-color: var(--accent-cyan);
 }
 
 /* ==========================================================================
@@ -1547,74 +1600,351 @@ button, input, textarea, select {
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN (MEDIA QUERIES)
+   RESPONSIVE DESIGN & MOBILE OPTIMIZATIONS (HP, iPhone, iPad, Tablet)
    ========================================================================== */
-@media (max-width: 992px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+
+/* iOS Safe Area & Notched Screen Adaptations */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .site-header {
+    padding-top: env(safe-area-inset-top);
   }
   
-  .featured-grid {
-    grid-template-columns: 1fr;
+  .floating-wa-container {
+    bottom: max(1.25rem, calc(1.25rem + env(safe-area-inset-bottom)));
+    right: max(1.25rem, calc(1.25rem + env(safe-area-inset-right)));
   }
-  
-  .timeline-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
+
+  .site-footer {
+    padding-bottom: max(3rem, calc(2.5rem + env(safe-area-inset-bottom)));
   }
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
+/* Tablet & Smaller Laptops (Max 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
   }
-  
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.75rem;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .timeline-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Tablets (Portrait) & Large Smartphones (Max 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .site-header {
+    height: 4.25rem;
+  }
+
+  .nav-wrapper {
+    height: 4.25rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Frosted Glass Mobile Navigation Drawer */
   .nav-menu {
     position: fixed;
-    top: 4.5rem;
+    top: 4.25rem;
     left: 0;
     width: 100%;
-    background: rgba(7, 11, 20, 0.98);
-    backdrop-filter: blur(16px);
+    max-height: calc(100vh - 4.25rem);
+    overflow-y: auto;
+    background: rgba(7, 11, 20, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
-    padding: 2rem 1.5rem;
-    gap: 1.25rem;
-    border-bottom: 1px solid var(--border-color);
-    transform: translateY(-150%);
-    transition: transform var(--transition-normal);
+    align-items: stretch;
+    padding: 1.5rem 1.25rem 2rem;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border-highlight);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    transform: translateY(-160%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 999;
   }
-  
+
   .nav-menu.open {
     transform: translateY(0);
   }
-  
-  .form-row,
-  .form-actions-grid {
-    grid-template-columns: 1fr;
+
+  .nav-link {
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-sm);
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    transition: all var(--transition-fast);
   }
-  
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: rgba(56, 189, 248, 0.1);
+    border-color: rgba(56, 189, 248, 0.25);
+    color: var(--accent-cyan);
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  /* Section Spacing on Mobile */
+  .section {
+    padding: 4.5rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.6rem, 5.5vw, 2.1rem);
+  }
+
+  /* Hero Section Mobile */
   .hero-section {
-    padding-top: 6.5rem;
+    padding: 6rem 0 3.5rem;
+    min-height: auto;
   }
-  
+
+  .hero-title {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .hero-socials {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
   .hero-card {
     padding: 1.25rem;
   }
-  
-  .featured-card {
-    padding: 1.5rem;
+
+  /* Stats on Mobile */
+  .stats-banner {
+    padding: 1.75rem 0;
   }
-  
+
+  .stat-number {
+    font-size: 1.85rem;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+  }
+
+  /* Featured Project (SAWIT) */
+  .featured-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .featured-title-wrap h3 {
+    font-size: 1.45rem;
+  }
+
+  .featured-subtitle {
+    font-size: 0.82rem;
+  }
+
+  .award-ribbon {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .arch-box {
+    padding: 1rem;
+  }
+
+  /* Projects & Skills Grid */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .certs-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Contact Form & Actions (Crucial iOS Safari input zoom fix) */
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    font-size: 16px !important; /* Prevents auto-zoom on iOS */
+    padding: 0.8rem 0.9rem;
+  }
+
+  .form-actions-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .contact-form-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .contact-card-direct {
+    padding: 1.15rem;
+  }
+
+  /* Floating WhatsApp Widget Mobile */
+  .wa-popup {
+    width: calc(100vw - 2.5rem);
+    max-width: 320px;
+    right: 0;
+    bottom: 68px;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 2.5rem 0;
+  }
+
   .footer-wrapper {
     flex-direction: column;
     text-align: center;
+    gap: 1.25rem;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+/* Compact Smartphones (Max 480px, e.g. iPhone SE, Standard iPhones, Galaxy) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .profile-avatar-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .avatar-info .location-text {
+    justify-content: center;
+  }
+
+  .terminal-meta-list {
+    font-size: 0.78rem;
+    padding: 0.85rem;
+  }
+
+  .terminal-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .terminal-val {
+    text-align: left;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .stat-item {
+    padding: 0.75rem 0.25rem;
+  }
+
+  .stat-number {
+    font-size: 1.55rem;
+  }
+
+  .tech-tags {
+    gap: 0.35rem;
+  }
+
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .timeline-list {
+    padding-left: 1rem;
+  }
+
+  .timeline-item::before {
+    left: -1.35rem;
+    width: 12px;
+    height: 12px;
+  }
+
+  .contact-card-direct {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .copy-btn {
+    margin-left: 0;
   }
 }
