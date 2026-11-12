@@ -13,8 +13,8 @@
 // CONFIGURATION (Easily customize these values)
 // ==========================================
 const CONFIG = {
-  // Replace with your actual WhatsApp phone number with country code (e.g., '6281234567890' for Indonesia)
-  // Ganti dengan nomor WhatsApp Anda yang sebenarnya (format internasional tanpa tanda +, contoh: 6281234567890)
+  // Replace with your actual WhatsApp phone number with country code (e.g., '6281378062556' for Indonesia)
+  // Ganti dengan nomor WhatsApp Anda yang sebenarnya (format internasional tanpa tanda +, contoh: 6281378062556)
   WHATSAPP_NUMBER: '6281378062556', 
   
   // Destination email address
@@ -49,6 +49,7 @@ const translations = {
     hero_desc: "Mahasiswa Rekayasa Keamanan Siber di Politeknik Negeri Batam (2024–2028). Berpengalaman langsung dalam intrusion detection, security monitoring, machine learning untuk deteksi ancaman, dan pengembangan backend Zero Trust.",
     hero_cta_contact: "Hubungi Saya",
     hero_cta_projects: "Lihat Portofolio",
+    btn_download_cv: "Unduh CV",
     hero_card_title: "fakhri_terminal ~ status",
     hero_card_role: "Rekayasa Keamanan Siber",
     hero_meta_institution: "Institusi",
@@ -89,6 +90,17 @@ const translations = {
     sawit_f2: "User & Entity Behavior Analytics (UEBA) untuk mendeteksi deviasi pola akses pengguna dan potensi pengambilalihan akun (account takeover).",
     sawit_f3: "Integrasi terpadu ekosistem SOC: Wazuh SIEM, Suricata IDS/IPS, Keycloak IAM, TheHive untuk case management, dan MISP untuk threat intelligence sharing.",
     sawit_result: "Pencapaian: 1st Place Winner - Networking & Cybersecurity Category, 6th International PBL EXPO 2026.",
+    sawit_cs_problem_label: "Masalah:",
+    sawit_cs_problem_desc: "Aplikasi web akademik aktif rentan terhadap eksploitasi serangan modern (SQLi, XSS, brute force, privilege escalation) dengan keterbatasan visibilitas telemetri waktu nyata.",
+    sawit_cs_approach_label: "Pendekatan:",
+    sawit_cs_approach_desc: "Mengimplementasikan arsitektur Zero Trust dengan pertahanan berlapis: deployment sensor Suricata IDS/IPS inline, custom rules, agregasi log Wazuh SIEM, API telemetri Flask, multi-model ensemble ML (Isolation Forest, One-Class SVM, Autoencoder) & UEBA, serta otomatisasi isolasi firewall MikroTik.",
+    sawit_cs_role_label: "Peranku (Team Lead):",
+    sawit_cs_role_desc: "Memimpin tim perancangan arsitektur keamanan, orkestrasi pipeline integrasi IDS/IPS dan SIEM, serta deployment model deteksi anomali ML dan UEBA.",
+    sawit_cs_results_label: "Hasil (Juara 1 PBL EXPO 2026):",
+    sawit_cs_results_desc: "1st Place Winner Networking & Cybersecurity Category pada 6th International PBL EXPO 2026. Metrik evaluasi: [TODO: Masukkan angka metrik akurasi / latency / false positive rate spesifik untuk SAWIT].",
+    badge_sawit_module: "Modul SAWIT",
+    btn_repo: "Repo",
+    btn_demo: "Demo / Dokumentasi",
 
     // Other Projects
     proj2_title: "Network Telemetry & SIEM Pipeline",
@@ -162,6 +174,9 @@ const translations = {
 
     cert5_title: "Red Hat OpenShift Development I: Introduction to Containers with Podman",
     cert5_issuer: "Red Hat • Pengembangan & Manajemen Kontainer",
+    cert_label_issuer: "Penerbit:",
+    cert_label_year: "Tahun:",
+    cert_verify_link: "Verifikasi Kredensial ↗",
 
     // Contact
     contact_eyebrow: "06. HUBUNGI SAYA",
@@ -170,6 +185,8 @@ const translations = {
     
     contact_wa_title: "Chat Langsung via WhatsApp",
     contact_wa_desc: "Respon cepat untuk diskusi mendesak",
+    contact_cv_title: "Curriculum Vitae (CV)",
+    contact_cv_desc: "Unduh CV Resmi (PDF)",
     contact_email_title: "Email Pribadi",
     contact_email_desc: "fakhririzal710@gmail.com",
     contact_linkedin_title: "LinkedIn Profile",
@@ -201,13 +218,13 @@ const translations = {
     // WA Floating
     wa_float_tooltip: "Chat langsung dengan Fakhri di WhatsApp",
     wa_float_title: "Fakhri Rizal",
-    wa_float_status: "Online • Respons Cepat",
+    wa_float_status: "Biasanya membalas dalam 1×24 jam",
     wa_float_greeting: "Halo! Terima kasih sudah mengunjungi web profil saya. Ada yang bisa saya bantu atau diskusikan?",
     wa_float_btn: "Buka Obrolan WhatsApp",
 
     // Footer
     footer_rights: "Hak Cipta Dilindungi.",
-    footer_static_note: "Web Profil Statis Berkecepatan Tinggi • Bebas Kerentanan Backend"
+    footer_static_note: "Web profil statis • Dibangun dengan fokus pada keamanan"
   },
 
   en: {
@@ -229,6 +246,7 @@ const translations = {
     hero_desc: "Cybersecurity Engineering student at Politeknik Negeri Batam (2024–2028). Hands-on experience in intrusion detection, security monitoring, machine learning for threat detection, and Zero Trust backend development.",
     hero_cta_contact: "Get in Touch",
     hero_cta_projects: "Explore Projects",
+    btn_download_cv: "Download CV",
     hero_card_title: "fakhri_terminal ~ status",
     hero_card_role: "Cybersecurity Engineering",
     hero_meta_institution: "Institution",
@@ -269,6 +287,17 @@ const translations = {
     sawit_f2: "User & Entity Behavior Analytics (UEBA) to identify anomalous user patterns and mitigate account takeover threats.",
     sawit_f3: "Seamless SOC ecosystem integration: Wazuh SIEM, Suricata IDS/IPS, Keycloak IAM, TheHive for incident response, and MISP for threat intelligence sharing.",
     sawit_result: "Achievement: 1st Place Winner - Networking & Cybersecurity Category, 6th International PBL EXPO 2026.",
+    sawit_cs_problem_label: "Problem:",
+    sawit_cs_problem_desc: "Active academic web applications are vulnerable to modern exploit vectors (SQLi, XSS, brute force, privilege escalation) with limited real-time telemetry visibility.",
+    sawit_cs_approach_label: "Approach:",
+    sawit_cs_approach_desc: "Implemented a multi-layered Zero Trust defense architecture: inline Suricata IDS/IPS sensor deployment, custom rules, Wazuh SIEM log aggregation, Flask telemetry API, multi-model ensemble ML (Isolation Forest, One-Class SVM, Autoencoder) & UEBA, and automated MikroTik firewall isolation.",
+    sawit_cs_role_label: "My Role (Team Lead):",
+    sawit_cs_role_desc: "Led the team in security architecture design, IDS/IPS & SIEM integration pipeline orchestration, and deployment of ML anomaly detection models & UEBA.",
+    sawit_cs_results_label: "Results (1st Place PBL EXPO 2026):",
+    sawit_cs_results_desc: "1st Place Winner in the Networking & Cybersecurity Category at the 6th International PBL EXPO 2026. Evaluation metrics: [TODO: Provide specific accuracy / latency / false positive rate metrics for SAWIT].",
+    badge_sawit_module: "SAWIT Module",
+    btn_repo: "Repo",
+    btn_demo: "Demo / Docs",
 
     // Other Projects
     proj2_title: "Network Telemetry & SIEM Pipeline",
@@ -342,6 +371,9 @@ const translations = {
 
     cert5_title: "Red Hat OpenShift Development I: Introduction to Containers with Podman",
     cert5_issuer: "Red Hat • Containerization & Rootless Podman Management",
+    cert_label_issuer: "Issuer:",
+    cert_label_year: "Year:",
+    cert_verify_link: "Verify Credential ↗",
 
     // Contact
     contact_eyebrow: "06. GET IN TOUCH",
@@ -350,6 +382,8 @@ const translations = {
     
     contact_wa_title: "Direct WhatsApp Chat",
     contact_wa_desc: "Fast response for immediate inquiries",
+    contact_cv_title: "Curriculum Vitae (CV)",
+    contact_cv_desc: "Download Official CV (PDF)",
     contact_email_title: "Personal Email",
     contact_email_desc: "fakhririzal710@gmail.com",
     contact_linkedin_title: "LinkedIn Profile",
@@ -381,13 +415,13 @@ const translations = {
     // WA Floating
     wa_float_tooltip: "Chat directly with Fakhri on WhatsApp",
     wa_float_title: "Fakhri Rizal",
-    wa_float_status: "Online • Quick Response",
+    wa_float_status: "Usually replies within 24 hours",
     wa_float_greeting: "Hello! Thank you for visiting my portfolio. How can I assist you today?",
     wa_float_btn: "Open WhatsApp Chat",
 
     // Footer
     footer_rights: "All Rights Reserved.",
-    footer_static_note: "High-Performance Static Portfolio • Zero Backend Vulnerabilities"
+    footer_static_note: "Static profile website • Built with a focus on security"
   }
 };
 
@@ -454,6 +488,20 @@ function setLanguage(lang) {
 
   // Update HTML lang attribute
   document.documentElement.lang = lang;
+
+  // Synchronize CV download links according to active language (ID vs EN)
+  const heroCvBtn = document.getElementById('heroCvBtn');
+  const contactCvCardLink = document.getElementById('contactCvCardLink');
+  const cvPath = lang === 'en' ? 'assets/CV-Fakhri-Rizal-EN.pdf' : 'assets/CV-Fakhri-Rizal-ID.pdf';
+  const cvFilename = lang === 'en' ? 'CV-Fakhri-Rizal-EN.pdf' : 'CV-Fakhri-Rizal-ID.pdf';
+  if (heroCvBtn) {
+    heroCvBtn.setAttribute('href', cvPath);
+    heroCvBtn.setAttribute('download', cvFilename);
+  }
+  if (contactCvCardLink) {
+    contactCvCardLink.setAttribute('href', cvPath);
+    contactCvCardLink.setAttribute('download', cvFilename);
+  }
 }
 
 // ==========================================

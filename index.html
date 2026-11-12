@@ -14,16 +14,28 @@
   <meta name="author" content="Fakhri Rizal">
   <meta name="keywords" content="Fakhri Rizal, Cybersecurity Engineering, Politeknik Negeri Batam, SAWIT, SIEM, Wazuh, Suricata, Machine Learning Security, Backend Developer, Python, Zero Trust">
   
-  <!-- Open Graph / Meta Social -->
+  <!-- Canonical & Open Graph / Meta Social -->
+  <link rel="canonical" href="https://fakhri-rizal.vercel.app/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Fakhri Rizal | Cybersecurity & Backend Portfolio">
-  <meta property="og:description" content="Cybersecurity Engineering Student at Politeknik Negeri Batam. IDS/ML Security, SIEM & Backend Developer.">
-  <meta property="og:url" content="https://fakhririzal.github.io/">
+  <meta property="og:url" content="https://fakhri-rizal.vercel.app/">
+  <meta property="og:title" content="Fakhri Rizal | Cybersecurity Engineering & Backend Developer">
+  <meta property="og:description" content="Portfolio profesional Fakhri Rizal - Cybersecurity Engineering student at Politeknik Negeri Batam. IDS/IPS, SIEM, Machine Learning for Anomaly Detection, Zero Trust Architecture & Backend Developer.">
+  <meta property="og:image" content="https://fakhri-rizal.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fakhri Rizal | Cybersecurity Engineering & Backend Developer">
+  <meta name="twitter:description" content="Portfolio profesional Fakhri Rizal - Cybersecurity Engineering student at Politeknik Negeri Batam. IDS/IPS, SIEM, Machine Learning for Anomaly Detection, Zero Trust Architecture & Backend Developer.">
+  <meta name="twitter:image" content="https://fakhri-rizal.vercel.app/og-image.png">
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
   
-  <!-- Favicon (Cyber Shield SVG) -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>">
 </head>
 <body>
@@ -116,6 +128,15 @@
               <span data-i18n="hero_cta_contact">Hubungi Saya</span>
             </a>
 
+            <a href="assets/CV-Fakhri-Rizal.pdf" download="CV-Fakhri-Rizal.pdf" class="btn btn-outline" id="heroCvBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span data-i18n="btn_download_cv">Unduh CV</span>
+            </a>
+
             <a href="#projects" class="btn btn-outline">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
@@ -128,6 +149,13 @@
 
           <!-- Quick Connect Pills -->
           <div class="hero-socials">
+            <a href="https://github.com/fakhririzal" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              <span>GitHub</span>
+            </a>
+
             <a href="https://www.linkedin.com/in/fakhri-rizal-96195a341" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
@@ -301,6 +329,26 @@
                 </div>
               </div>
 
+              <!-- SAWIT Case Study Breakdown -->
+              <div class="case-study-box">
+                <div class="case-study-item">
+                  <span class="case-study-heading" data-i18n="sawit_cs_problem_label">Masalah:</span>
+                  <p data-i18n="sawit_cs_problem_desc">Aplikasi web akademik aktif rentan terhadap eksploitasi serangan modern (SQLi, XSS, brute force, privilege escalation) dengan keterbatasan visibilitas telemetri waktu nyata.</p>
+                </div>
+                <div class="case-study-item">
+                  <span class="case-study-heading" data-i18n="sawit_cs_approach_label">Pendekatan:</span>
+                  <p data-i18n="sawit_cs_approach_desc">Mengimplementasikan arsitektur Zero Trust dengan pertahanan berlapis: deployment sensor Suricata IDS/IPS inline, custom rules, agregasi log Wazuh SIEM, API telemetri Flask, multi-model ensemble ML (Isolation Forest, One-Class SVM, Autoencoder) & UEBA, serta otomatisasi isolasi firewall MikroTik.</p>
+                </div>
+                <div class="case-study-item">
+                  <span class="case-study-heading" data-i18n="sawit_cs_role_label">Peranku (Team Lead):</span>
+                  <p data-i18n="sawit_cs_role_desc">Memimpin tim perancangan arsitektur keamanan, orkestrasi pipeline integrasi IDS/IPS dan SIEM, serta deployment model deteksi anomali ML dan UEBA.</p>
+                </div>
+                <div class="case-study-item">
+                  <span class="case-study-heading" data-i18n="sawit_cs_results_label">Hasil (Juara 1 PBL EXPO 2026):</span>
+                  <p data-i18n="sawit_cs_results_desc">1st Place Winner Networking & Cybersecurity Category pada 6th International PBL EXPO 2026. <!-- TODO: Masukkan angka metrik evaluasi spesifik SAWIT jika ada --> Metrik evaluasi: [TODO: Masukkan angka metrik akurasi / latency / false positive rate spesifik untuk SAWIT].</p>
+                </div>
+              </div>
+
               <!-- Tech Stack Badges -->
               <div class="tech-tags">
                 <span class="tech-tag">Zero Trust Architecture</span>
@@ -311,6 +359,20 @@
                 <span class="tech-tag">Keycloak IAM</span>
                 <span class="tech-tag">TheHive & MISP</span>
                 <span class="tech-tag">Python (Flask)</span>
+              </div>
+
+              <!-- Project Action Buttons (Sembunyi otomatis jika href kosong) -->
+              <div class="project-actions">
+                <!-- TODO: Masukkan URL GitHub Repo SAWIT ke atribut href di bawah -->
+                <a href="" target="_blank" rel="noopener noreferrer" class="btn-proj-action">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span data-i18n="btn_repo">Repo</span>
+                </a>
+                <!-- TODO: Masukkan URL Demo/Dokumentasi SAWIT ke atribut href di bawah -->
+                <a href="" target="_blank" rel="noopener noreferrer" class="btn-proj-action">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  <span data-i18n="btn_demo">Demo / Dokumentasi</span>
+                </a>
               </div>
             </div>
 
@@ -350,7 +412,7 @@
           </div>
         </article>
 
-        <!-- OTHER PROJECTS GRID (Including Pre-configured & Placeholder slots) -->
+        <!-- OTHER PROJECTS GRID -->
         <div class="projects-grid">
           <!-- Project 2: Network Telemetry & SIEM Pipeline -->
           <article class="project-card">
@@ -358,7 +420,10 @@
               <svg class="project-folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
               </svg>
-              <span class="badge badge-emerald">Network Sec</span>
+              <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                <span class="badge badge-cyan" data-i18n="badge_sawit_module">Modul SAWIT</span>
+                <span class="badge badge-emerald">Network Sec</span>
+              </div>
             </div>
             <h3 class="project-title" data-i18n="proj2_title">Network Telemetry & SIEM Pipeline</h3>
             <p class="project-desc" data-i18n="proj2_desc">
@@ -370,6 +435,18 @@
               <span class="tech-tag">ELK Stack</span>
               <span class="tech-tag">Bash / Linux</span>
             </div>
+            <div class="project-actions">
+              <!-- TODO: Masukkan URL GitHub Repo modul ini ke href di bawah -->
+              <a href="" target="_blank" rel="noopener noreferrer" class="btn-proj-action">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span data-i18n="btn_repo">Repo</span>
+              </a>
+              <!-- TODO: Masukkan URL Demo/Dokumentasi modul ini ke href di bawah -->
+              <a href="" target="_blank" rel="noopener noreferrer" class="btn-proj-action">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span data-i18n="btn_demo">Demo / Dokumentasi</span>
+              </a>
+            </div>
           </article>
 
           <!-- Project 3: Secure Identity & Zero Trust API Gateway -->
@@ -378,7 +455,10 @@
               <svg class="project-folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
-              <span class="badge badge-purple">Backend & IAM</span>
+              <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                <span class="badge badge-cyan" data-i18n="badge_sawit_module">Modul SAWIT</span>
+                <span class="badge badge-purple">Backend & IAM</span>
+              </div>
             </div>
             <h3 class="project-title" data-i18n="proj3_title">Secure Identity & Zero Trust API Gateway</h3>
             <p class="project-desc" data-i18n="proj3_desc">
@@ -390,6 +470,18 @@
               <span class="tech-tag">Podman</span>
               <span class="tech-tag">TypeScript</span>
             </div>
+            <div class="project-actions">
+              <!-- TODO: Masukkan URL GitHub Repo modul ini ke href di bawah -->
+              <a href="" target="_blank" rel="noopener noreferrer" class="btn-proj-action">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span data-i18n="btn_repo">Repo</span>
+              </a>
+              <!-- TODO: Masukkan URL Demo/Dokumentasi modul ini ke href di bawah -->
+              <a href="" target="_blank" rel="noopener noreferrer" class="btn-proj-action">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span data-i18n="btn_demo">Demo / Dokumentasi</span>
+              </a>
+            </div>
           </article>
 
           <!-- Project 4: UEBA & Anomaly Detection Service -->
@@ -398,7 +490,10 @@
               <svg class="project-folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
               </svg>
-              <span class="badge badge-cyan">AI Security</span>
+              <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                <span class="badge badge-cyan" data-i18n="badge_sawit_module">Modul SAWIT</span>
+                <span class="badge badge-cyan">AI Security</span>
+              </div>
             </div>
             <h3 class="project-title" data-i18n="proj4_title">UEBA & Anomaly Detection Service</h3>
             <p class="project-desc" data-i18n="proj4_desc">
@@ -410,25 +505,17 @@
               <span class="tech-tag">Python REST API</span>
               <span class="tech-tag">Isolation Forest</span>
             </div>
-          </article>
-
-          <!-- ================================================================
-               SLOT PROYEK TAMBAHAN / EDITABLE PLACEHOLDER
-               Fakhri dapat dengan mudah menduplikasi atau mengubah blok ini
-               jika ingin menambahkan proyek baru di masa mendatang.
-               ================================================================ -->
-          <article class="project-card project-placeholder-card">
-            <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="8" x2="12" y2="16"></line>
-              <line x1="8" y1="12" x2="16" y2="12"></line>
-            </svg>
-            <h3 class="placeholder-title" data-i18n="proj_placeholder_title">Slot Proyek Tambahan</h3>
-            <p class="placeholder-note" data-i18n="proj_placeholder_desc">
-              Ruang ini disiapkan untuk proyek baru berikutnya. Anda dapat menambahkan tautan repositori GitHub, demo live, atau dokumentasi teknis dengan mudah.
-            </p>
-            <div style="margin-top: 1rem;">
-              <span class="badge badge-amber">+ Ready for New Projects</span>
+            <div class="project-actions">
+              <!-- TODO: Masukkan URL GitHub Repo modul ini ke href di bawah -->
+              <a href="" target="_blank" rel="noopener noreferrer" class="btn-proj-action">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span data-i18n="btn_repo">Repo</span>
+              </a>
+              <!-- TODO: Masukkan URL Demo/Dokumentasi modul ini ke href di bawah -->
+              <a href="" target="_blank" rel="noopener noreferrer" class="btn-proj-action">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span data-i18n="btn_demo">Demo / Dokumentasi</span>
+              </a>
             </div>
           </article>
         </div>
@@ -547,19 +634,19 @@
             </div>
             <div class="skill-items-list">
               <div class="skill-item">
-                <div class="skill-name-row"><span>SIEM (Wazuh & ELK Stack)</span><span>Advanced</span></div>
+                <div class="skill-name-row"><span>SIEM (Wazuh & ELK Stack)</span><span>Proficient</span></div>
                 <div class="skill-level-bar"><div class="skill-level-fill" style="width: 90%;"></div></div>
               </div>
               <div class="skill-item">
-                <div class="skill-name-row"><span>Intrusion Detection (IDS/IPS Suricata)</span><span>Advanced</span></div>
+                <div class="skill-name-row"><span>Intrusion Detection (IDS/IPS Suricata)</span><span>Proficient</span></div>
                 <div class="skill-level-bar"><div class="skill-level-fill" style="width: 88%;"></div></div>
               </div>
               <div class="skill-item">
-                <div class="skill-name-row"><span>Zero Trust Architecture</span><span>Proficient</span></div>
+                <div class="skill-name-row"><span>Zero Trust Architecture</span><span>Hands-on</span></div>
                 <div class="skill-level-bar"><div class="skill-level-fill" style="width: 85%;"></div></div>
               </div>
               <div class="skill-item">
-                <div class="skill-name-row"><span>UEBA & Threat Analysis</span><span>Proficient</span></div>
+                <div class="skill-name-row"><span>UEBA & Threat Analysis</span><span>Hands-on</span></div>
                 <div class="skill-level-bar"><div class="skill-level-fill" style="width: 82%;"></div></div>
               </div>
             </div>
@@ -576,15 +663,15 @@
             </div>
             <div class="skill-items-list">
               <div class="skill-item">
-                <div class="skill-name-row"><span>Isolation Forest & One-Class SVM</span><span>Proficient</span></div>
+                <div class="skill-name-row"><span>Isolation Forest & One-Class SVM</span><span>Hands-on</span></div>
                 <div class="skill-level-bar"><div class="skill-level-fill" style="width: 85%;"></div></div>
               </div>
               <div class="skill-item">
-                <div class="skill-name-row"><span>Autoencoder & LSTM/GRU</span><span>Proficient</span></div>
+                <div class="skill-name-row"><span>Autoencoder & LSTM/GRU</span><span>Hands-on</span></div>
                 <div class="skill-level-bar"><div class="skill-level-fill" style="width: 80%;"></div></div>
               </div>
               <div class="skill-item">
-                <div class="skill-name-row"><span>Anomaly Detection Evaluation</span><span>Proficient</span></div>
+                <div class="skill-name-row"><span>Anomaly Detection Evaluation</span><span>Hands-on</span></div>
                 <div class="skill-level-bar"><div class="skill-level-fill" style="width: 84%;"></div></div>
               </div>
               <div class="skill-item">
@@ -605,7 +692,7 @@
             </div>
             <div class="skill-items-list">
               <div class="skill-item">
-                <div class="skill-name-row"><span>Python (Flask, FastAPI)</span><span>Advanced</span></div>
+                <div class="skill-name-row"><span>Python (Flask, FastAPI)</span><span>Proficient</span></div>
                 <div class="skill-level-bar"><div class="skill-level-fill" style="width: 88%;"></div></div>
               </div>
               <div class="skill-item">
@@ -613,11 +700,11 @@
                 <div class="skill-level-bar"><div class="skill-level-fill" style="width: 75%;"></div></div>
               </div>
               <div class="skill-item">
-                <div class="skill-name-row"><span>Podman & Containerization</span><span>Proficient</span></div>
+                <div class="skill-name-row"><span>Podman & Containerization</span><span>Hands-on</span></div>
                 <div class="skill-level-bar"><div class="skill-level-fill" style="width: 82%;"></div></div>
               </div>
               <div class="skill-item">
-                <div class="skill-name-row"><span>Linux Administration (Debian/RHEL)</span><span>Advanced</span></div>
+                <div class="skill-name-row"><span>Linux Administration (Debian/RHEL)</span><span>Proficient</span></div>
                 <div class="skill-level-bar"><div class="skill-level-fill" style="width: 88%;"></div></div>
               </div>
             </div>
@@ -633,19 +720,19 @@
             </div>
             <div class="skill-items-list">
               <div class="skill-item">
-                <div class="skill-name-row"><span>Keycloak (OAuth2, OIDC, IAM)</span><span>Proficient</span></div>
+                <div class="skill-name-row"><span>Keycloak (OAuth2, OIDC, IAM)</span><span>Hands-on</span></div>
                 <div class="skill-level-bar"><div class="skill-level-fill" style="width: 84%;"></div></div>
               </div>
               <div class="skill-item">
-                <div class="skill-name-row"><span>TheHive & MISP</span><span>Proficient</span></div>
+                <div class="skill-name-row"><span>TheHive & MISP</span><span>Hands-on</span></div>
                 <div class="skill-level-bar"><div class="skill-level-fill" style="width: 80%;"></div></div>
               </div>
               <div class="skill-item">
-                <div class="skill-name-row"><span>Wireshark & Packet Telemetry</span><span>Advanced</span></div>
+                <div class="skill-name-row"><span>Wireshark & Packet Telemetry</span><span>Proficient</span></div>
                 <div class="skill-level-bar"><div class="skill-level-fill" style="width: 86%;"></div></div>
               </div>
               <div class="skill-item">
-                <div class="skill-name-row"><span>Git, GitHub & CI/CD</span><span>Proficient</span></div>
+                <div class="skill-name-row"><span>Git, GitHub & CI/CD</span><span>Hands-on</span></div>
                 <div class="skill-level-bar"><div class="skill-level-fill" style="width: 85%;"></div></div>
               </div>
             </div>
@@ -678,7 +765,12 @@
             </div>
             <div class="cert-info">
               <h4 data-i18n="cert1_title">1st Place Winner - Networking & Cybersecurity Category</h4>
-              <p data-i18n="cert1_issuer">6th International PBL EXPO 2026</p>
+              <div class="cert-meta-list">
+                <div class="cert-meta-item"><span class="cert-meta-label" data-i18n="cert_label_issuer">Penerbit:</span> <span class="cert-meta-val">6th International PBL EXPO</span></div>
+                <div class="cert-meta-item"><span class="cert-meta-label" data-i18n="cert_label_year">Tahun:</span> <span class="cert-meta-val">2026</span></div>
+                <!-- TODO: Masukkan link verifikasi sertifikat ke atribut href di bawah -->
+                <a href="" target="_blank" rel="noopener noreferrer" class="cert-verify-link" data-i18n="cert_verify_link">Verifikasi Kredensial ↗</a>
+              </div>
             </div>
           </div>
 
@@ -692,6 +784,12 @@
             <div class="cert-info">
               <h4 data-i18n="cert2_title">Certified Cybersecurity Educator Professional (CCEP)</h4>
               <p data-i18n="cert2_issuer">Sertifikasi Profesional Pendidik Keamanan Siber</p>
+              <div class="cert-meta-list">
+                <!-- TODO: Penerbit CCEP belum ada datanya (otomatis disembunyikan jika kosong) -->
+                <!-- TODO: Tahun CCEP belum ada datanya (otomatis disembunyikan jika kosong) -->
+                <!-- TODO: Masukkan link verifikasi CCEP ke atribut href di bawah -->
+                <a href="" target="_blank" rel="noopener noreferrer" class="cert-verify-link" data-i18n="cert_verify_link">Verifikasi Kredensial ↗</a>
+              </div>
             </div>
           </div>
 
@@ -707,7 +805,12 @@
             </div>
             <div class="cert-info">
               <h4 data-i18n="cert3_title">Teknik Informasi Sistem Administrasi Jaringan</h4>
-              <p data-i18n="cert3_issuer">Standar Kompetensi Kejuruan / Administrasi Jaringan Komputer</p>
+              <div class="cert-meta-list">
+                <div class="cert-meta-item"><span class="cert-meta-label" data-i18n="cert_label_issuer">Penerbit:</span> <span class="cert-meta-val">LKS / BNSP</span></div>
+                <div class="cert-meta-item"><span class="cert-meta-label" data-i18n="cert_label_year">Tahun:</span> <span class="cert-meta-val">2023</span></div>
+                <!-- TODO: Masukkan link verifikasi sertifikat ke atribut href di bawah -->
+                <a href="" target="_blank" rel="noopener noreferrer" class="cert-verify-link" data-i18n="cert_verify_link">Verifikasi Kredensial ↗</a>
+              </div>
             </div>
           </div>
 
@@ -722,7 +825,12 @@
             </div>
             <div class="cert-info">
               <h4 data-i18n="cert4_title">Cyber Threat Management</h4>
-              <p data-i18n="cert4_issuer">Manajemen dan Penanganan Ancaman Siber Terstruktur</p>
+              <div class="cert-meta-list">
+                <div class="cert-meta-item"><span class="cert-meta-label" data-i18n="cert_label_issuer">Penerbit:</span> <span class="cert-meta-val">Cisco</span></div>
+                <!-- TODO: Tahun perolehan Cisco Cyber Threat Management belum ada datanya -->
+                <!-- TODO: Masukkan link verifikasi Cisco ke atribut href di bawah -->
+                <a href="" target="_blank" rel="noopener noreferrer" class="cert-verify-link" data-i18n="cert_verify_link">Verifikasi Kredensial ↗</a>
+              </div>
             </div>
           </div>
 
@@ -737,7 +845,12 @@
             </div>
             <div class="cert-info">
               <h4 data-i18n="cert5_title">Red Hat OpenShift Development I: Introduction to Containers with Podman</h4>
-              <p data-i18n="cert5_issuer">Red Hat • Pengembangan & Manajemen Kontainer</p>
+              <div class="cert-meta-list">
+                <div class="cert-meta-item"><span class="cert-meta-label" data-i18n="cert_label_issuer">Penerbit:</span> <span class="cert-meta-val">Red Hat</span></div>
+                <!-- TODO: Tahun perolehan Red Hat belum ada datanya -->
+                <!-- TODO: Masukkan link verifikasi Red Hat ke atribut href di bawah -->
+                <a href="" target="_blank" rel="noopener noreferrer" class="cert-verify-link" data-i18n="cert_verify_link">Verifikasi Kredensial ↗</a>
+              </div>
             </div>
           </div>
         </div>
@@ -761,7 +874,7 @@
           <!-- Direct Channels & Socials -->
           <div class="contact-info-block">
             <!-- WhatsApp Direct Card -->
-            <a href="https://wa.me/6281234567890?text=Halo%20Fakhri%2C%20saya%20tertarik%20berdiskusi%20mengenai%20proyek%20keamanan%20siber" target="_blank" rel="noopener noreferrer" class="contact-card-direct" id="directWaCardLink">
+            <a href="https://wa.me/6281378062556?text=Halo%20Fakhri%2C%20saya%20tertarik%20berdiskusi%20mengenai%20proyek%20keamanan%20siber" target="_blank" rel="noopener noreferrer" class="contact-card-direct" id="directWaCardLink">
               <div class="contact-direct-icon icon-wa">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
@@ -770,6 +883,21 @@
               <div class="contact-direct-text">
                 <h4 data-i18n="contact_wa_title">Chat Langsung via WhatsApp</h4>
                 <p data-i18n="contact_wa_desc">Respon cepat untuk diskusi mendesak</p>
+              </div>
+            </a>
+
+            <!-- CV Download Card -->
+            <a href="assets/CV-Fakhri-Rizal.pdf" download="CV-Fakhri-Rizal.pdf" class="contact-card-direct" id="contactCvCardLink">
+              <div class="contact-direct-icon" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.3); color: var(--accent-cyan);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </div>
+              <div class="contact-direct-text">
+                <h4 data-i18n="contact_cv_title">Curriculum Vitae (CV)</h4>
+                <p data-i18n="contact_cv_desc">Unduh CV Resmi (PDF)</p>
               </div>
             </a>
 
@@ -890,7 +1018,7 @@
         </svg>
         <div>
           <h4 data-i18n="wa_float_title">Fakhri Rizal</h4>
-          <p data-i18n="wa_float_status">Online • Respons Cepat</p>
+          <p data-i18n="wa_float_status">Biasanya membalas dalam 1×24 jam</p>
         </div>
       </div>
       <div class="wa-popup-body">
@@ -916,7 +1044,7 @@
     <div class="container footer-wrapper">
       <div>
         <p>© 2026 Fakhri Rizal. <span data-i18n="footer_rights">Hak Cipta Dilindungi.</span></p>
-        <p class="footer-note" data-i18n="footer_static_note">Web Profil Statis Berkecepatan Tinggi • Bebas Kerentanan Backend</p>
+        <p class="footer-note" data-i18n="footer_static_note">Web profil statis • Dibangun dengan fokus pada keamanan</p>
       </div>
 
       <div class="footer-links">

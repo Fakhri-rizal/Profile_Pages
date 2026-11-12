@@ -890,6 +890,72 @@ button, input, textarea, select {
   color: var(--accent-cyan);
 }
 
+/* SAWIT Case Study Breakdown */
+.case-study-box {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.case-study-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.case-study-heading {
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Project Action Buttons (Repo & Demo) */
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.btn-proj-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.btn-proj-action:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  background: rgba(56, 189, 248, 0.1);
+}
+
+/* Sembunyikan otomatis jika URL kosong, "#", atau tidak diset */
+.btn-proj-action:not([href]),
+.btn-proj-action[href=""],
+.btn-proj-action[href="#"] {
+  display: none !important;
+}
+
 /* Architecture visual diagram box */
 .arch-box {
   background: var(--bg-primary);
@@ -1240,6 +1306,58 @@ button, input, textarea, select {
 .cert-info p {
   font-size: 0.85rem;
   color: var(--text-muted);
+}
+
+/* Certification Meta Information */
+.cert-meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.cert-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cert-meta-label {
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.cert-meta-val {
+  color: var(--text-main);
+}
+
+.cert-verify-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--accent-cyan);
+  margin-top: 0.3rem;
+  transition: color var(--transition-fast);
+}
+
+.cert-verify-link:hover {
+  text-decoration: underline;
+  color: #a5f3fc;
+}
+
+/* Sembunyikan field sertifikat yang kosong otomatis */
+.cert-meta-item:empty,
+.cert-meta-val:empty,
+.cert-verify-link:not([href]),
+.cert-verify-link[href=""],
+.cert-verify-link[href="#"] {
+  display: none !important;
 }
 
 /* ==========================================================================

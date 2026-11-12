@@ -1,6 +1,6 @@
 # Fakhri Rizal — Professional Portfolio & Engineering Profile
 
-[![Profile](https://img.shields.io/badge/Role-Cybersecurity%20Engineering%20%7C%20SecOps%20%7C%20Backend-0284c7?style=for-the-badge)](https://fakhririzal.github.io/)
+[![Profile](https://img.shields.io/badge/Live%20Profile-fakhri--rizal.vercel.app-0284c7?style=for-the-badge)](https://fakhri-rizal.vercel.app/)
 [![Institution](https://img.shields.io/badge/Institution-Politeknik%20Negeri%20Batam-059669?style=for-the-badge)](https://www.polibatam.ac.id/)
 [![Achievement](https://img.shields.io/badge/Achievement-1st%20Place%20PBL%20EXPO%202026-d97706?style=for-the-badge)](#-prestasi-utama--proyek-sawit)
 [![Architecture](https://img.shields.io/badge/Architecture-Pure%20Static%20%7C%20Zero%20Vulnerability-38bdf8?style=for-the-badge)](#-arsitektur-dan-keamanan-web)
@@ -74,11 +74,21 @@ Selamat datang di repositori web profil profesional **Fakhri Rizal**. Web ini di
 
 ```text
 profile/
-├── index.html         # Struktur semantik HTML5, meta tag security, & konten dwibahasa
+├── index.html         # Struktur semantik HTML5, meta tag SEO/OpenGraph, & konten dwibahasa
+├── vercel.json        # Enterprise HTTP Security Headers (HSTS, CSP/Permissions, nosniff, DENY)
+├── robots.txt         # Konfigurasi crawler & sitemap index
+├── sitemap.xml        # Sitemap XML terstruktur
+├── og-image.png       # OpenGraph Banner (1200x630) untuk media sosial / link preview
+├── favicon.ico        # Icon favicon browser
+├── favicon.png        # Icon favicon modern PNG
+├── assets/
+│   ├── CV-Fakhri-Rizal-ID.pdf  # Curriculum Vitae versi Bahasa Indonesia
+│   ├── CV-Fakhri-Rizal-EN.pdf  # Curriculum Vitae versi English
+│   └── CV-Fakhri-Rizal.pdf     # Fallback default CV
 ├── css/
-│   └── style.css      # Desain bertema Cyber SecOps, responsive grid, glassmorphism
+│   └── style.css      # Desain bertema Cyber SecOps, responsive mobile/tablet/desktop, glassmorphism
 ├── js/
-│   └── main.js        # Logika dwibahasa, integrasi WhatsApp & form email, widget chat
+│   └── main.js        # Logika dwibahasa, integrasi WhatsApp & form email, widget chat, animasi canvas
 └── README.md          # Dokumentasi teknis & panduan deployment
 ```
 
@@ -90,14 +100,14 @@ Buka berkas [`js/main.js`](js/main.js), lalu sesuaikan konfigurasi pada baris te
 
 ```javascript
 const CONFIG = {
-  // Ganti dengan nomor WhatsApp aktif Anda (format internasional tanpa +, contoh: 6281234567890)
-  WHATSAPP_NUMBER: '6281234567890', 
+  // Nomor WhatsApp aktif Anda (format internasional tanpa +, contoh: 6281378062556)
+  WHATSAPP_NUMBER: '6281378062556', 
   
   // Email tujuan penerimaan pesan formulir kontak
   EMAIL_ADDRESS: 'fakhririzal710@gmail.com',
   
-  // Access Key gratis Web3Forms (buka https://web3forms.com/ dan masukkan email Anda)
-  WEB3FORMS_ACCESS_KEY: 'YOUR_ACCESS_KEY_HERE' 
+  // Access Key Web3Forms
+  WEB3FORMS_ACCESS_KEY: '4f59d234-ad6a-4798-a213-dc4373cc4b4e' 
 };
 ```
 
@@ -171,10 +181,16 @@ Vercel akan mendeteksi perubahan tersebut dan secara otomatis me-redeploy web An
 
 ## 🔒 Arsitektur dan Keamanan Web
 
-Sebagai portofolio praktisi keamanan siber, web ini dirancang dengan standar keamanan tinggi:
-- **Zero Attack Surface**: Tidak menggunakan database SQL, interpreter PHP, atau runtime server-side dinamis yang rentan terhadap SQLi, Local File Inclusion (LFI), maupun Remote Code Execution (RCE).
-- **Security Headers**: Dilengkapi dengan meta tag keamanan `X-Content-Type-Options: nosniff` dan `Referrer-Policy: strict-origin-when-cross-origin`.
-- **Supply-Chain Defense**: Semua ikon disematkan sebagai SVG inline lokal yang aman, menghilangkan risiko modifikasi skrip pihak ketiga dari CDN luar.
+Sebagai portofolio praktisi keamanan siber, web ini dirancang dengan standar keamanan dan *Zero Attack Surface*:
+- **Zero Attack Surface**: Tidak menggunakan basis data SQL, interpreter PHP, atau runtime dinamis backend yang rentan terhadap SQLi, LFI, SSRF, maupun RCE.
+- **Enterprise Security Headers (dikonfigurasi via `vercel.json`)**:
+  - `Strict-Transport-Security`: `max-age=63072000; includeSubDomains; preload` (Enforce HSTS 2 tahun)
+  - `X-Content-Type-Options`: `nosniff` (Mencegah MIME type sniffing)
+  - `X-Frame-Options`: `DENY` (Proteksi total dari Clickjacking)
+  - `Referrer-Policy`: `strict-origin-when-cross-origin` (Melindungi privasi rujukan)
+  - `Permissions-Policy`: `camera=(), microphone=(), geolocation=()` (Menonaktifkan akses perangkat keras yang tidak diperlukan)
+- **External Link Hardening**: Seluruh link eksternal `target="_blank"` diproteksi dengan `rel="noopener noreferrer"` untuk mencegah reverse tabnabbing.
+- **Supply-Chain Defense**: Semua ikon disematkan sebagai SVG inline lokal yang aman, mengeliminasi risiko CDN tampering.
 
 ---
 
