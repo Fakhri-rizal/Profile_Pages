@@ -160,23 +160,55 @@ const translations = {
     certs_title: "Sertifikasi & Penghargaan",
     certs_desc: "Validasi kompetensi profesional dan pencapaian kompetisi tingkat nasional & internasional.",
 
-    cert1_title: "1st Place Winner - Networking & Cybersecurity Category",
-    cert1_issuer: "6th International PBL EXPO 2026",
-    
-    cert2_title: "Certified Cybersecurity Educator Professional (CCEP)",
-    cert2_issuer: "Sertifikasi Profesional Pendidik Keamanan Siber",
-
-    cert3_title: "Teknik Informasi Sistem Administrasi Jaringan",
-    cert3_issuer: "Standar Kompetensi Kejuruan / Administrasi Jaringan Komputer",
-
-    cert4_title: "Cyber Threat Management",
-    cert4_issuer: "Manajemen dan Penanganan Ancaman Siber Terstruktur",
-
-    cert5_title: "Red Hat OpenShift Development I: Introduction to Containers with Podman",
-    cert5_issuer: "Red Hat • Pengembangan & Manajemen Kontainer",
     cert_label_issuer: "Penerbit:",
     cert_label_year: "Tahun:",
+    cert_label_validity: "Berlaku hingga:",
+    cert_label_credential_id: "ID Kredensial:",
+    cert_label_duration: "Durasi:",
+    cert_rh_duration_val: "24 jam",
+    cert_label_type: "Tipe:",
+    cert_rh_type_val: "Certificate of Attendance",
     cert_verify_link: "Verifikasi Kredensial ↗",
+
+    // Cert 1: CCEP
+    cert_ccep_title: "Certified Cybersecurity Educator Professional (CCEP)",
+    cert_ccep_issuer: "Red Team Leaders",
+    cert_ccep_desc: "Sertifikasi Profesional Pendidik Keamanan Siber",
+
+    // Cert 2: OPSWAT OCFA
+    cert_opswat_title: "OPSWAT Cybersecurity Fundamentals Associate (OCFA)",
+    cert_opswat_issuer: "OPSWAT Academy",
+
+    // Cert 3: Junior Cybersecurity Analyst
+    cert_cisco_jr_title: "Junior Cybersecurity Analyst Career Path",
+    cert_cisco_jr_issuer: "Cisco Networking Academy",
+    cert_cisco_jr_desc: "Rekomendasi kontrol keamanan, mitigasi ancaman jaringan dan sistem, vulnerability & risk assessment, serta rencana incident response.",
+
+    // Cert 4: Cyber Threat Management
+    cert_cisco_ctm_title: "Cyber Threat Management",
+    cert_cisco_ctm_issuer: "Cisco Networking Academy",
+    cert_cisco_ctm_desc: "Manajemen dan Penanganan Ancaman Siber Terstruktur",
+
+    // Cert 5: Red Hat
+    cert_redhat_title: "Red Hat OpenShift Development I: Introduction to Containers with Podman (DO188)",
+    cert_redhat_issuer: "Red Hat",
+
+    // Cert 6: Teknik Informasi Sistem Administrasi Jaringan
+    cert_bnsp_title: "Teknik Informasi Sistem Administrasi Jaringan",
+    cert_bnsp_issuer: "LKS / BNSP",
+    cert_bnsp_desc: "Standar Kompetensi Kejuruan / Administrasi Jaringan Komputer",
+
+    // Legacy fallback keys
+    cert1_title: "1st Place Winner - Networking & Cybersecurity Category",
+    cert1_issuer: "6th International PBL EXPO 2026",
+    cert2_title: "Certified Cybersecurity Educator Professional (CCEP)",
+    cert2_issuer: "Red Team Leaders",
+    cert3_title: "Teknik Informasi Sistem Administrasi Jaringan",
+    cert3_issuer: "LKS / BNSP",
+    cert4_title: "Cyber Threat Management",
+    cert4_issuer: "Cisco Networking Academy",
+    cert5_title: "Red Hat OpenShift Development I: Introduction to Containers with Podman (DO188)",
+    cert5_issuer: "Red Hat",
 
     // Contact
     contact_eyebrow: "06. HUBUNGI SAYA",
@@ -357,23 +389,55 @@ const translations = {
     certs_title: "Certifications & Honors",
     certs_desc: "Professional competency certifications and national/international competition honors.",
 
-    cert1_title: "1st Place Winner - Networking & Cybersecurity Category",
-    cert1_issuer: "6th International PBL EXPO 2026",
-    
-    cert2_title: "Certified Cybersecurity Educator Professional (CCEP)",
-    cert2_issuer: "Cybersecurity Educator Professional Certification",
-
-    cert3_title: "Teknik Informasi Sistem Administrasi Jaringan",
-    cert3_issuer: "National Vocational Competency in Network System Administration",
-
-    cert4_title: "Cyber Threat Management",
-    cert4_issuer: "Structured Cyber Threat Identification & Incident Handling",
-
-    cert5_title: "Red Hat OpenShift Development I: Introduction to Containers with Podman",
-    cert5_issuer: "Red Hat • Containerization & Rootless Podman Management",
     cert_label_issuer: "Issuer:",
     cert_label_year: "Year:",
+    cert_label_validity: "Valid until:",
+    cert_label_credential_id: "Credential ID:",
+    cert_label_duration: "Duration:",
+    cert_rh_duration_val: "24 hours",
+    cert_label_type: "Type:",
+    cert_rh_type_val: "Certificate of Attendance",
     cert_verify_link: "Verify Credential ↗",
+
+    // Cert 1: CCEP
+    cert_ccep_title: "Certified Cybersecurity Educator Professional (CCEP)",
+    cert_ccep_issuer: "Red Team Leaders",
+    cert_ccep_desc: "Cybersecurity Educator Professional Certification",
+
+    // Cert 2: OPSWAT OCFA
+    cert_opswat_title: "OPSWAT Cybersecurity Fundamentals Associate (OCFA)",
+    cert_opswat_issuer: "OPSWAT Academy",
+
+    // Cert 3: Junior Cybersecurity Analyst
+    cert_cisco_jr_title: "Junior Cybersecurity Analyst Career Path",
+    cert_cisco_jr_issuer: "Cisco Networking Academy",
+    cert_cisco_jr_desc: "Security control recommendations, network and system threat mitigation, vulnerability & risk assessment, and incident response planning.",
+
+    // Cert 4: Cyber Threat Management
+    cert_cisco_ctm_title: "Cyber Threat Management",
+    cert_cisco_ctm_issuer: "Cisco Networking Academy",
+    cert_cisco_ctm_desc: "Structured Cyber Threat Identification & Incident Handling",
+
+    // Cert 5: Red Hat
+    cert_redhat_title: "Red Hat OpenShift Development I: Introduction to Containers with Podman (DO188)",
+    cert_redhat_issuer: "Red Hat",
+
+    // Cert 6: Teknik Informasi Sistem Administrasi Jaringan
+    cert_bnsp_title: "Teknik Informasi Sistem Administrasi Jaringan",
+    cert_bnsp_issuer: "LKS / BNSP",
+    cert_bnsp_desc: "National Vocational Competency in Network System Administration",
+
+    // Legacy fallback keys
+    cert1_title: "1st Place Winner - Networking & Cybersecurity Category",
+    cert1_issuer: "6th International PBL EXPO 2026",
+    cert2_title: "Certified Cybersecurity Educator Professional (CCEP)",
+    cert2_issuer: "Red Team Leaders",
+    cert3_title: "Teknik Informasi Sistem Administrasi Jaringan",
+    cert3_issuer: "LKS / BNSP",
+    cert4_title: "Cyber Threat Management",
+    cert4_issuer: "Cisco Networking Academy",
+    cert5_title: "Red Hat OpenShift Development I: Introduction to Containers with Podman (DO188)",
+    cert5_issuer: "Red Hat",
 
     // Contact
     contact_eyebrow: "06. GET IN TOUCH",

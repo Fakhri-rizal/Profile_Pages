@@ -46,11 +46,12 @@ Selamat datang di repositori web profil profesional **Fakhri Rizal**. Web ini di
   *Teknik Komputer dan Jaringan (TKJ)*
 
 ### Sertifikasi & Lisensi
-- **1st Place Winner** — Networking & Cybersecurity Category, 6th International PBL EXPO 2026
-- **Certified Cybersecurity Educator Professional (CCEP)**
-- **Teknik Informasi Sistem Administrasi Jaringan** — Standar Kompetensi Kejuruan
-- **Cyber Threat Management** — Manajemen & Respons Insiden Siber
-- **Red Hat OpenShift Development I: Introduction to Containers with Podman** — Red Hat
+1. **Certified Cybersecurity Educator Professional (CCEP)** — Red Team Leaders (2026)
+2. **OPSWAT Cybersecurity Fundamentals Associate (OCFA)** — OPSWAT Academy (2026, Valid until 2027)
+3. **Junior Cybersecurity Analyst Career Path** — Cisco Networking Academy (2025)
+4. **Cyber Threat Management** — Cisco Networking Academy (2025)
+5. **Red Hat OpenShift Development I: Introduction to Containers with Podman (DO188)** — Red Hat (2026, Certificate of Attendance)
+6. **Teknik Informasi Sistem Administrasi Jaringan** — Standar Kompetensi Kejuruan (LKS / BNSP, 2023)
 
 ---
 
